@@ -402,3 +402,5 @@ FodyWeavers.xsd
 ##########################################################################
 venv/
 src/venv
+Extracted_Data/
+.DS_Store
