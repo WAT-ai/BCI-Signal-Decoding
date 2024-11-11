@@ -403,4 +403,5 @@ FodyWeavers.xsd
 venv/
 src/venv
 Extracted_Data/
+processed_data/
 .DS_Store
