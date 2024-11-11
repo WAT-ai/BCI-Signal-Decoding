@@ -1,17 +1,14 @@
 '''
 Generates tuning plots for pmd data
 
-MM_S1-velocity
--> velocity_val: [neuron1, neuron2...]
-
 '''
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import argparse
 
-SOURCE_CSV_PATH="/Users/anny/Code/Wat_ai/BCI-Signal-Decoding/Extracted_Data"
-DEST_CSV_PATH="/Users/anny/Code/Wat_ai/BCI-Signal-Decoding/processed_data/tuning_plots"
+SOURCE_CSV_PATH="/BCI-Signal-Decoding/Extracted_Data"
+DEST_CSV_PATH="/BCI-Signal-Decoding/processed_data/tuning_plots"
 SESSIONS={
     # Session: [number of trials, number of neurons]
     "MM_S1": [496, 94],
@@ -91,7 +88,7 @@ def main():
         plot_diagram(args.neuron, args.monkey, independent_var)
     else:
         num_bins = 1
-        if args.combine_bins:
+        if args.combine_bins: # wip, does nothing right now
             num_bins = args.combine_bins
         process_data(num_bins)
 
