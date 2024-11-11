@@ -402,3 +402,6 @@ FodyWeavers.xsd
 ##########################################################################
 venv/
 src/venv
+Data Extraction/Extracted Data
+src/correlation analysis - thomas/reach example
+src/correlation analysis - thomas/time_bin_info.csv
