@@ -1,3 +1,12 @@
+'''
+This file combines all time bin based data from a dataset (MM_S1_processed, MT_S1_processed, MT_S2_processed, or MT_S3_processed)
+It will concatenate all of the time bins for all reaches in the dataset, each being their own row
+This includes the time of bin, neuron firing data per neuron, kinematic data (location, velocity, acceleration), and whether or not the target was on
+Exports to "time_bin_info.csv" in your current folder
+'''
+
+
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
@@ -8,10 +17,12 @@ time_datasets = [
      "kinematic_data", "target_on"
 ]
 
+dataset_path = "Data Extraction/Extracted Data/MM_S1_processed"
+
 time_dfs = []
 
 for dataset in time_datasets:
-    directory = f"../../Data Extraction/Extracted Data/MM_S1_processed/{dataset}"
+    directory = f"{dataset_path}/{dataset}"
 
     # Get a sorted list of CSV files in numerical order
     files = sorted(
@@ -35,4 +46,4 @@ time_bin_df = pd.concat(time_dfs, axis=1)
 
 time_bin_df = time_bin_df.drop("time_stamps", axis=1)
 
-time_bin_df.to_csv("time_bin_info.csv", index=False)
+time_bin_df.to_csv("time_bin_info2.csv", index=False)
