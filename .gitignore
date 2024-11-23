@@ -405,3 +405,7 @@ src/venv
 Data Extraction/Extracted Data
 src/correlation analysis - thomas/reach example
 src/correlation analysis - thomas/time_bin_info.csv
+time_bin_MM_S1.csv
+time_bin_MT_S1.csv
+time_bin_MT_S2.csv
+time_bin_MT_S3.csv
