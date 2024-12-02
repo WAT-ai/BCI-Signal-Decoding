@@ -3,9 +3,9 @@
 ### Contents
 1. [Project Overview](#exploration-of-data)
 2. [Preliminary exploration of data](#preliminary-exploration-of-data)
-3. Investigation of a Single Trial
-4. Implementing a Linear Decoder Function
-5. Implementing a Nengo Decoding Model
+3. [Investigation of a Single Trial](#investigation-of-a-single-trial)
+4. [Implementing a Linear Decoder Function](#linear-decoder-function)
+5. [Implementing a Nengo Decoding Model](#nengo-functional-decoder-model)
 
 
 ## Project Overview
