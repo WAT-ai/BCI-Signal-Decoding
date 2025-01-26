@@ -413,3 +413,4 @@ env
 src/data_and_scripts/
 Data Extraction/matlab-files
 .DS_Store
+nengo-env
