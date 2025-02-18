@@ -414,3 +414,8 @@ src/data_and_scripts/
 Data Extraction/matlab-files
 .DS_Store
 nengo-env
+src/Data/MM_S1_raw.mat
+.gitignore
+src/Data/MT_S2_raw.mat
+src/Data/MT_S3_raw.mat
+src/Data/MT_S1_raw.mat
