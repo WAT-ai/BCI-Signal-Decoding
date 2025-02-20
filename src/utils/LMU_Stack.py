@@ -24,7 +24,7 @@ class LMUStack(Network):
         A = A / self.theta
         B = B / self.theta  
 
-        # State-Space Conversion
+        # State-Space Conversionk
         self.A_p = A * 0.1 + np.eye(self.q)
         self.B_p = B * 0.1
 
