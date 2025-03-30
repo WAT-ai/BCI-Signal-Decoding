@@ -6,7 +6,7 @@ import os
 def load_data(key: str):
     if key not in ["MM_S1", "MT_S1", "MT_S2", "MT_S3"]:
         raise Exception(f"Key must be one of: \"MM_S1\", \"MT_S1\", \"MT_S2\", or \"MT_S3\", got \"{key}\"")
-    raw_data = loadmat(os.path.abspath("../src/Data/" + key + "_raw.mat"))
+    raw_data = loadmat(os.path.abspath("../Data/" + key + "_raw.mat"))
 
     t = raw_data['cont']['t'][0][0][:,0]
     x_pos = raw_data['cont']['pos'][0][0][:,0]
@@ -24,7 +24,7 @@ def load_data(key: str):
         spikes.append(spike_data[i]['ts'])
         if np.max(spikes[-1]) > max_time:
             max_time = np.max(spikes[-1])
-    ts = np.zeros((int(max_time * 1000), len(spikes)))
+    ts = np.zeros((int(max_time * 1000 -1), len(spikes)))
     for i in range(ts.shape[1]):
         ts[:,i], _ = np.histogram(spikes[i], bins=np.arange(0, max_time, 0.001))
     return [ts, t, x_pos, y_pos, x_vel, y_vel, x_acl, y_acl]
